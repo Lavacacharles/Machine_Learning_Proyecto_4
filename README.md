@@ -31,45 +31,15 @@ _Cada caso es un segmento de audio de dos segundos muestreado a 2 kHz, lo que da
 
 ## **AGREGAR AL LATEX**
 
-| Modelo                          | Técnica de normalización | Accuracy promedio | Desviación estándar |
-|---------------------------------|--------------------------|-------------------|---------------------|
-| *Regresión Logística*         | MaxAbsScaler             | 0.7811            | 0.0058              |
-|                                 | MinMaxScaler             | 0.7813            | 0.0065              |
-|                                 | Normalizer               | 0.7649            | 0.0049              |
-|                                 | PowerTransformer         | 0.7872            | 0.0073              |
-|                                 | RobustScaler             | 0.7841            | 0.0062              |
-|                                 | StandardScaler           | 0.7841            | 0.0062              |
-|                                 | minmax_scale             | 0.7813            | 0.0065              |
-|                                 | QuantileTransformer      | 0.8001            | 0.0070              |
-| *RandomForestClassifier*      | MaxAbsScaler             | 0.8217            | 0.0024              |
-|                                 | MinMaxScaler             | 0.8217            | 0.0024              |
-|                                 | Normalizer               | 0.8181            | 0.0051              |
-|                                 | PowerTransformer         | 0.8231            | 0.0051              |
-|                                 | RobustScaler             | 0.8231            | 0.0056              |
-|                                 | StandardScaler           | 0.8228            | 0.0038              |
-|                                 | minmax_scale             | 0.8217            | 0.0024              |
-|                                 | QuantileTransformer      | 0.8233            | 0.0046              |
-| *SVM*                         | MaxAbsScaler             | 0.7979            | 0.0077              |
-|                                 | MinMaxScaler             | 0.7906            | 0.0075              |
-|                                 | Normalizer               | 0.7770            | 0.0058              |
-|                                 | PowerTransformer         | 0.8262            | 0.0100              |
-|                                 | RobustScaler             | 0.7629            | 0.0055              |
-|                                 | StandardScaler           | 0.8110            | 0.0110              |
-|                                 | minmax_scale             | 0.7906            | 0.0075              |
-|                                 | QuantileTransformer      | 0.8314            | 0.0079              |
-| *GradientBoostingClassifier*  | MaxAbsScaler             | 0.8147            | 0.0108              |
-|                                 | MinMaxScaler             | 0.8146            | 0.0093              |
-|                                 | Normalizer               | 0.8137            | 0.0108              |
-|                                 | PowerTransformer         | 0.8158            | 0.0089              |
-|                                 | RobustScaler             | 0.8136            | 0.0087              |
-|                                 | StandardScaler           | 0.8142            | 0.0105              |
-|                                 | minmax_scale             | 0.8146            | 0.0093              |
-|                                 | QuantileTransformer      | 0.8153            | 0.0091              |
-| *KNN*                         | MaxAbsScaler             | 0.8016            | 0.0069              |
-|                                 | MinMaxScaler             | 0.8010            | 0.0053              |
-|                                 | Normalizer               | 0.7887            | 0.0051              |
-|                                 | PowerTransformer         | 0.8031            | 0.0065              |
-|                                 | RobustScaler             | 0.7844            | 0.0094              |
-|                                 | StandardScaler           | 0.8012            | 0.0070              |
-|                                 | minmax_scale             | 0.8010            | 0.0053              |
-|                                 | QuantileTransformer      | 0.8009            | 0.0077              |
+| Modelo / Técnica de normalización  | *Regresión Logística* | *RandomForestClassifier* | *SVM* | *GradientBoostingClassifier* | *KNN* |
+|-----------------------------------|-------------------------|----------------------------|---------|-------------------------------|---------|
+| *MaxAbsScaler*                 | 0.7811                  | 0.8217                     | 0.7979  | 0.8147                        | 0.8016  |
+| *MinMaxScaler*                 | 0.7813                  | 0.8217                     | 0.7906  | 0.8146                        | 0.8010  |
+| *Normalizer*                   | 0.7649                  | 0.8181                     | 0.7770  | 0.8137                        | 0.7887  |
+| *PowerTransformer*             | 0.7872                  | 0.8231                     | 0.8262  | 0.8158                        | 0.8031  |
+| *RobustScaler*                 | 0.7841                  | 0.8231                     | 0.7629  | 0.8136                        | 0.7844  |
+| *StandardScaler*               | 0.7841                  | 0.8228                     | 0.8110  | 0.8142                        | 0.8012  |
+| *minmax_scale*                 | 0.7813                  | 0.8217                     | 0.7906  | 0.8146                        | 0.8010  |
+| *QuantileTransformer*          | 0.8001                  | 0.8233                     | 0.8314  | 0.8153                        | 0.8009  |
+| *Accuracy promedio*            | 0.7811                  | 0.8217                     | 0.7979  | 0.8147                        | 0.8016  |
+| *Desviación estándar*          | 0.0058                  | 0.0024                     | 0.0077  | 0.0108                        | 0.0069  |
